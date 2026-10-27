@@ -32,10 +32,24 @@
 | 도구 | 설치 | 호출 |
 | --- | --- | --- |
 | Codex | Codex에 `$skill-installer https://github.com/gail5135/career-story-writer-ko 의 루트 스킬을 설치해 줘` 요청 | `$career-story-writer-ko` |
-| Claude Code | `git clone https://github.com/gail5135/career-story-writer-ko.git ~/.claude/skills/career-story-writer-ko` | `/career-story-writer-ko` |
+| Claude Code | 아래 운영체제별 명령 | `/career-story-writer-ko` |
 | Gemini CLI | `gemini skills install https://github.com/gail5135/career-story-writer-ko` | `career-story-writer-ko 스킬을 사용해 줘` |
 
-Claude Code에서 스킬 폴더가 없다면 먼저 `mkdir -p ~/.claude/skills`를 실행하세요. 이미 같은 이름으로 설치했다면 다시 복제하지 않아도 됩니다. 자세한 설치 위치와 옵션은 [Claude Code](https://code.claude.com/docs/en/skills)·[Gemini CLI](https://geminicli.com/docs/cli/using-agent-skills/) 공식 문서를 참고하세요.
+Claude Code 설치에는 Git이 필요합니다. **macOS·Linux** 터미널에서는:
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+git clone https://github.com/gail5135/career-story-writer-ko.git "$HOME/.claude/skills/career-story-writer-ko"
+```
+
+**Windows**에서는 PowerShell을 열고 실행하세요:
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME/.claude/skills" | Out-Null
+git clone https://github.com/gail5135/career-story-writer-ko.git "$HOME/.claude/skills/career-story-writer-ko"
+```
+
+Codex의 채팅 설치 요청과 Gemini CLI의 `gemini skills install` 명령은 두 운영체제에서 동일합니다. 이미 설치된 폴더가 있다면 `git clone`을 다시 실행하지 마세요. 자세한 옵션은 [Claude Code](https://code.claude.com/docs/en/skills)·[Gemini CLI](https://geminicli.com/docs/cli/using-agent-skills/) 공식 문서를 참고하세요.
 
 ## 사용 가이드
 
