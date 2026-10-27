@@ -27,6 +27,15 @@
 
 ## 설치
 
+가장 간단한 방법은 이 페이지 주소와 아래 문구를 **Codex, Claude Code 또는 Gemini CLI**에 그대로 보내는 것입니다. 사용 중인 도구와 운영체제에 맞춰 설치하도록 요청할 수 있습니다.
+
+```text
+https://github.com/gail5135/career-story-writer-ko
+이 저장소의 career-story-writer-ko 스킬을 내 개인 스킬로 설치해 줘. 이미 설치돼 있다면 중복 설치하지 말고 확인해 줘. 설치 후 호출 방법도 알려 줘.
+```
+
+### 직접 설치하기
+
 세 도구 모두 이 저장소의 `SKILL.md`를 그대로 사용합니다.
 
 | 도구 | 설치 | 호출 |
